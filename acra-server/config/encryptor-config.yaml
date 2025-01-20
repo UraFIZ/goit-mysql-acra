@@ -1,0 +1,17 @@
+schemas:
+  - table: users
+    columns:
+      - id
+      - name
+      - lastname
+      - email
+      - age
+    encrypted:
+      - column: name
+      - column: lastname
+      - column: email
+        token_type: email
+        tokenized: true
+      - column: age
+        token_type: int32
+        tokenized: true
